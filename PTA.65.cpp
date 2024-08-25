@@ -23,6 +23,5 @@ int main() {
             printf("%d ", a);
             break;
         }
-
     }
 }
