@@ -19,7 +19,7 @@ int main() {
                     break;
                 }
             } else {
-                cha = (ge * 100 + bai * 10 + shi) - shi * 100 - bai * 10 - ge;
+                cha = (ge * 100 + bai * 10 + shi) - (shi * 100 - bai * 10 - ge);
                 if (cha != 495) {
                     printf("%d: %d - %d = %d\n", n, (ge * 100 + bai * 10 + shi), (shi * 100 + bai * 10 + ge), cha);
                 } else {
