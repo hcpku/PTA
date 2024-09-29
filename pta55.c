@@ -1,21 +1,19 @@
 #include<stdio.h>
 
 int main() {
-    int M, N, x, y, n = 0, sum = 0;
     int number;
-    scanf("%d %d", &M, &N);
-    number = M;
-    for (number = M; number <= N; number++) {
-        y = 0;
-        for (x = 2; x <= number; x++) {
-            if ((number % x) == 0) {
-                y++;
-            }
-        }
-        if (y == 1) {
-            n++;
-            sum += number;
+    scanf("%d", &number);
+    int x, y, min;
+    scanf("%d", &x);
+    min = x;
+    for (; number >= 0; number--) {
+        y = min;
+        scanf("%d", &x);
+        if (x > y) {
+            min = y;
+        } else {
+            min = x;
         }
     }
-    printf("%d %d", n, sum);
+    printf("min = %d", min);
 }
