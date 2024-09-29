@@ -1,19 +1,16 @@
 #include<stdio.h>
 
 int main() {
-    int number;
-    scanf("%d", &number);
-    int x, y, min;
-    scanf("%d", &x);
-    min = x;
-    for (; number >= 0; number--) {
-        y = min;
-        scanf("%d", &x);
-        if (x > y) {
-            min = y;
-        } else {
-            min = x;
-        }
+    int N;
+    double sum = 0.0, x, y, m, t, n;
+    scanf("%d", &N);
+    m = 2;
+    n = 1;
+    for (N = N; N > 0; N--) {
+        sum = 1.0 * sum + 1.0 * m / n;
+        t = n;
+        n = m;
+        m = m + t;
     }
-    printf("min = %d", min);
+    printf("%.2f", sum);
 }
