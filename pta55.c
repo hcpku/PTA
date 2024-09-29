@@ -1,16 +1,19 @@
 #include<stdio.h>
 
 int main() {
-    int x;
-    int wei;
-    int y;
+    int number;
+    scanf("%d", &number);
+    int x, y, min;
     scanf("%d", &x);
-    int xx = x;
-    for (wei = 1; (x / 10) > 0; wei++) {
-        x /= 10;
+    min = x;
+    for (; number >= 0; number--) {
+        y = min;
+        scanf("%d", &x);
+        if (x > y) {
+            min = y;
+        } else {
+            min = x;
+        }
     }
-    for (y = 0; xx > 0; xx = (xx - (xx % 10)) / 10) {
-        y += (xx % 10);
-    }
-    printf("%d %d", wei, y);
+    printf("min = %d", min);
 }
