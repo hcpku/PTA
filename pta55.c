@@ -1,16 +1,21 @@
 #include<stdio.h>
 
 int main() {
-    int N;
-    double sum = 0.0, x, y, m, t, n;
-    scanf("%d", &N);
-    m = 2;
-    n = 1;
-    for (N = N; N > 0; N--) {
-        sum = 1.0 * sum + 1.0 * m / n;
-        t = n;
-        n = m;
-        m = m + t;
+    int M, N, x, y, n = 0, sum = 0;
+    int number;
+    scanf("%d %d", &M, &N);
+    number = M;
+    for (number = M; number <= N; number++) {
+        y = 0;
+        for (x = 2; x <= number; x++) {
+            if ((number % x) == 0) {
+                y++;
+            }
+        }
+        if (y == 1) {
+            n++;
+            sum += number;
+        }
     }
-    printf("%.2f", sum);
+    printf("%d %d", n, sum);
 }
