@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(void) {
+int main() {
     int n;
     scanf("%d", &n);
     char a[600];
