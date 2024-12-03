@@ -3,18 +3,14 @@
 int cnt = 0;
 
 void rec(int a[100], int n, int m, int sum, int z, int y, int x) {
-    if ( z >= 4) {
-        if( sum==n ){
+    if (z >= 4) {
+        if (sum == n) {
             cnt++;
         }
         return;
     }
     for (; x < m; x++) {
-        sum += a[x];
-        z++;
-        rec(a, n, m, sum, z, y, x + 1);
-        sum = sum - a[x];
-        z--;
+        rec(a, n, m, sum+a[x], z+1, y, x + 1);
     }
 }
 
