@@ -18,7 +18,7 @@ void dfs(int a[101], int m, int n, int cnt, int i, int z) {
     }
     for (; i <= n; i++) {
         dfs(a, m - a[i], n, cnt + 1, i + 1, z + 1);
-        if (i==n && m == a[n]) {
+        if (i == n && m == a[n]) {
             cnt++;
         }
         com(cnt);
