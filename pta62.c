@@ -1,15 +1,23 @@
 #include<stdio.h>
 
 int main() {
-    int n, t, m = 1, x;
-    double sum = 1.0;
-    scanf("%d", &n);
-    for (t = 1; t <= n; t++) {
-        m = 1;
-        for (x = 1; x <= t; x++) {
-            m = m * x;
+    char ch;
+    int x = 0, y = 0, z = 0, m = 0;
+    for ( ; getchar(); ) {
+        ch = getchar();
+        if ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z')) {
+            x++;
+            continue;
         }
-        sum = sum + 1.0 / m;
+        if (ch == ' ' || ch == '\n') {
+            y++;
+            continue;
+        }
+        if (ch >= '0' && ch <= '9') {
+            z++;
+        } else {
+            m++;
+        }
     }
-    printf("%.8f", sum);
+    printf("letter = %d, blank = %d, digit = %d, other = %d", x, y - 1, z, m);
 }
