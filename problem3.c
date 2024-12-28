@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 int main() {
-    int a[100000];
+    long a[100000];
     int n;
     int t=0;
     scanf("%d", &n);
@@ -23,9 +23,9 @@ int main() {
     }
     for( n=0; n<t;n++){
         if( n!=(t-1)){
-            printf("%d ", a[n]);
+            printf("%ld ", a[n]);
         }else{
-            printf("%d", a[n]);
+            printf("%ld", a[n]);
         }
     }
 }
