@@ -1,29 +1,23 @@
 #include <stdio.h>
-int g=1;
-int cnt = 0;
-void rec( int m, int n, int h){
-    for( ; h<(m+n); h++){
-        if( (m+n)%h==0 ){
-            g=0;
+
+void judge(int x, int y,int z){
+    for( ; x<y; x++){
+        if( y%x==0 ){
+            z++;
         }
     }
-    if(g==1){
-        cnt++;
-    }
-}
-void dfs(int n, int a[16], int b[16], int x) {
-    for(; x<=n; x++){
-        rec( a[x-1], a[x], 2);
-    }
-}
+    if( z==0 ){
 
-int main() {
-    int n;
-    int a[16];
-    scanf("%d", &n);
-    for (int i = 0; i <= n; i++) {
-        a[i] = i;
     }
-    int b[16];
-    dfs(n, a, 0, 2);
+}
+void dfs(int n, int i, int b[17], int a[17]){
+    for(; i<=n; i++){
+        b[i] = 1;
+        dfs()
+    }
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+dfs( n, 1, 0, 0);
 }
